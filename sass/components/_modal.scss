@@ -1,0 +1,57 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+    /* visibility: hidden; */
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    min-width: 528px;
+    min-height: 581px;
+    padding: 33px 40px 47px;
+    background-color: var(--primary-bg-color);
+    opacity: 1;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+    }
+}
+
+.btn-close {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: inherit;
+    &:hover .btn-icon-close, &:focus .btn-icon-close {
+        fill: var(--accent-color);
+    }
+}
