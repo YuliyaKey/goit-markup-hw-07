@@ -23,10 +23,60 @@
             background-color: var(--accent-color);
         }
     }
-}
-
-.header-nav {
-    display: flex;
+    &-nav {
+        display: flex;
+    }
+    &-link {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    
+        color: var(--title-color);
+    
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+    
+        transition: color 250ms var(--timing-function);
+    
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+    &-contacts {
+        display: flex;
+    }
+    &-contact {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    
+        color: var(--primary-text-color);
+    
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+    
+        transition: color 250ms var(--timing-function);
+    
+        &:not(:last-child) {
+            margin-right: 30px;
+            margin-left: 315px;
+        }
+    
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+    &-icon {
+        margin-right: 10px;
+        fill: currentColor;
+    }
 }
 
 .logo-list {
@@ -53,55 +103,4 @@
     > span {
         color: var(--accent-color);
     }
-}
-
-.header-link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    color: var(--title-color);
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    transition: color 250ms var(--timing-function);
-    &:hover, &:focus {
-            color: var(--accent-color);
-        }
-}
-
-.header-contacts {
-    display: flex;
-}
-
-.header-contact {
-    display: flex;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    color: var(--primary-text-color);
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    transition: color 250ms var(--timing-function);
-    &:not(:last-child) {
-        margin-right: 30px;
-        margin-left: 315px;
-    }
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
-}
-
-.header-icon {
-    margin-right: 10px;
-    fill: currentColor;
 }

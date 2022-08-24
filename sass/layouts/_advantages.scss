@@ -22,25 +22,26 @@
     
         background-color: var(--secondary-bg-color);
     }
+    &-title {
+        color: var(--title-color);
+
+        margin-bottom: 10px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+    &-text {
+        color: var(--primary-text-color);
+    
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        text-align: justify;
+    }
 }
 
-.advantages-title {
-    color: var(--title-color);
 
-    margin-bottom: 10px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-}
-
-.advantages-text {
-    color: var(--primary-text-color);
-
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    text-align: justify;
-}

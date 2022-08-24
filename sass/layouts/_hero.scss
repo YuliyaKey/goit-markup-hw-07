@@ -4,6 +4,21 @@
     text-align: center;
 
     background-color: var(--footer-color);   
+
+    &-title {
+        color: var(--secondary-text-color);
+    
+        width: 696px;
+        margin-bottom: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
 }
 
 .overlay {
@@ -19,21 +34,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-.hero-title {
-    color: var(--secondary-text-color);
-
-    width: 696px;
-    margin-bottom: 30px;
-    margin-right: auto;
-    margin-left: auto;
-    
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
 }
 
 .modal-title {
@@ -137,25 +137,26 @@
         margin-right: 7px;
 
         background-color: var(--primary-bg-color);
+        .modal-policy:focus+& {
+            border-color: var(--accent-color);
+        }
+        .modal-policy:checked+& {
+            fill: var(--secondary-text-color);
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
     }
 }
 
 .policy-icon {
     fill: transparent;
-    /* transition: fill 250ms var(--timing-function); */
+    .modal-policy:checked+.checkbox-label & {
+        fill: var(--secondary-text-color);
+    }
+    .modal-policy:focus+.checkbox-label & {
+        border-color: var(--accent-color);
+    }
 }
-
-.modal-policy:checked+.checkbox-label .policy-icon,
-.modal-policy:checked+.checkbox-label span {
-    fill: var(--secondary-text-color);
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-// .modal-policy:focus+.checkbox-label .policy-icon,
-// .modal-policy:focus+.checkbox-label span {
-//     border-color: var(--accent-color);
-// }
 
 .modal-textarea {
     resize: none;
@@ -196,11 +197,9 @@
 
     fill: var(--title-color);
     transition: fill 250ms var(--timing-function);
-}
-
-.modal-input:hover+.modal-form-icon,
-.modal-input:focus+.modal-form-icon {
-    fill: var(--accent-color);
+    .modal-input:hover+&, .modal-input:focus+& {
+        fill: var(--accent-color);
+    }
 }
 
 .agreement {
